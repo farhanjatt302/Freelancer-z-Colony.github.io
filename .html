@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Reset default margin and padding */
+  body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Body background and font styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff (3); 
+    color: #333;
+    overflow-x: hidden;
+  }
+
+  /* Header styles */
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 80px 0 60px 0;
+  }
+
+  /* Animating the header */
+  header h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s 0.5s forwards;
+  }
+
+  /* Main content container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Book card styles */
+  .book-card {
+    border: 1px solid #ccc;
+    background-color: #3498db; /* Chosen color for book card */
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .book-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+  }
+
+  .book-details {
+    flex: 1;
+  }
+
+  .book-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .book-author {
+    color: #ddd;
+  }
+
+  .book-price {
+    font-size: 16px;
+    color: #e74c3c;
+  }
+      }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+</style>
+<title>Kitab Khana.com</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to <span class="animated-heading">Kitab Khana.com!</span></h1>
+  </header>
+
+  <div class="container">
+    <div class="book-card">
+      <img class="book-image" src="images/download%20(2).jpg" alt="Treasure Island">
+        
+      <div class="book-details">
+        <h2 class="book-title">Treasure Island</h2>
+        <p class="book-author">by Robert Louis Stevenson</p>
+        <p class="book-price">RS.650</p>
+          
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('Treasure Island', 650.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+</body>
+</html>
+    <!-- Use the CSS class for the "Add to Cart" button -->
+    
+
+
+         
+      </div>
+        
+    </div>
+
+    <div class="book-card">
+      <img class="book-image" src="images/download.jpg" alt="Oliver Twist">
+      <div class="book-details">
+        <h2 class="book-title">Oliver Twist</h2>
+        <p class="book-author">by Charles Dickens</p>
+        <p class="book-price">RS.1499</p>
+          <!DOCTYPE html>
+          <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "Add to Cart" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('Oliver Twist', 1499.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+</body>
+</html>
+           </div></div></div>
+          
+
+
+           
+
+       
+       
+
+    
+   
+
+   
+
+
+    
+<!-- ... Previous HTML code ... -->
+
+  <div class="container">
+    <div class="book-card">
+      <img class="book-image" src="images/download%20(1).jpg" alt="Phantom Toolbooth">
+      <div class="book-details">
+        <h2 class="book-title">The Phantom Toolbooth</h2>
+        <p class="book-author">by Norton Jester</p>
+        <p class="book-price">RS.1199</p>
+          <!DOCTYPE html>
+          <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "Add to Cart" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('The Phantom ToolBooth', 1199.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+</body>
+</html>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img class="book-image" src="images/download%20(3).jpg" alt="Swiss Family Rodinson">
+      <div class="book-details">
+        <h2 class="book-title">Swiss Family Robinson</h2>
+        <p class="book-author">by Johann David Wyss </p>
+        <p class="book-price">RS.750</p>
+          <!DOCTYPE html>
+          <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "Add to Cart" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('Swiss Family Robinson', 750.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+     </div>
+    </div>
+</body>
+</html>
+    <!-- Add more book cards -->
+    <div class="book-card">
+      <img class="book-image" src="images/download%20(4).jpg" alt="Titanic">
+      <div class="book-details">
+        <h2 class="book-title">Titanic</h2>
+        <p class="book-author">by Jane Austen</p>
+        <p class="book-price">RS.1999</p>
+           <!DOCTYPE html>
+          <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "Add to Cart" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('Titanic', 1999.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+     </div>
+    </div>
+</body>
+</html>
+
+    <div class="book-card">
+      <img class="book-image" src="images/images.jpg" alt="Moby Dick">
+      <div class="book-details">
+        <h2 class="book-title">Moby Dick</h2>
+        <p class="book-author">by Herman Melville</p>
+        <p class="book-price">RS.710</p>
+           <!DOCTYPE html>
+          <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "Add to Cart" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+<html lang="en">
+<head>
+    <!-- Your HTML and CSS for the main page -->
+</head>
+<body>
+    <!-- Your main page content -->
+
+    <!-- Example button for adding a book to the cart -->
+    <button class="add-to-cart-button" onclick="addToCart('Moby Dick', 710.00)">Add to Cart</button>
+
+    <script>
+        function addToCart(bookTitle, bookPrice) {
+            // Retrieve existing cart items from local storage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            const newItem = { title: bookTitle, price: bookPrice };
+            existingCart.push(newItem);
+
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        }
+    </script>
+     </div>
+    </div>
+     
+    
+
+</html>
+
+<br>
+       
+           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define a CSS class for styling the "+" button */
+        .add-to-cart-button {
+            background-color: #e74c3c; /* Red background color */
+            color: white; /* Text color */
+            padding: 5px 10px; /* Padding around the text */
+            border: none; /* Remove the default button border */
+            border-radius: 3px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+   
+    
+</body>
+</html>
+          <html></html>
+
+          
+   
+  
+               
+
+    
+   
+
+ </div>
+    </div>
+   
+
+  
+
+
+
+
+<html>
+    <body>
+        <center>  <button class="checkout-button">Checkout</button></center>
+<style>
+  .checkout-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+<script>
+  document.querySelector('.checkout-button').addEventListener('click', function() {
+    window.location.href = 'checkout.html';
+  });
+</script>
+        
+ <!-- Footer -->
+    <div class="footer"><center>
+        &copy; 2023 Brothers Book Shop | All Rights Reserved
+    </center></div>
+            
+</body>
+
+
+</html>

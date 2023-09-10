@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        /* CSS styles for the checkout page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 10px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .background-shapes {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            z-index: -1;
+        }
+        .checkout-heading {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .order-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .checkout-form {
+            margin-top: 20px;
+        }
+        .checkout-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .checkout-form input[type="text"],
+        .checkout-form input[type="email"],
+        .checkout-form input[type="tel"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-button {
+            display: block;
+            width: 98%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-shapes"></div>
+    <div class="container">
+        <h1 class="checkout-heading">Checkout</h1>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        /* CSS styles for the cart page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .book-details {
+            flex: 1;
+        }
+        .book-title {
+            font-weight: bold;
+        }
+        .book-price {
+            color: red;
+        }
+        .cart-total {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cart</h1>
+        
+        <!-- Cart Items -->
+        <div id="cartItems">
+            <!-- Cart items will be added here using JavaScript -->
+        </div>
+
+        <!-- Cart Total -->
+        <div class="cart-total" id="cartTotal">
+            Total: Rs. 0.00
+        </div>
+    </div>
+
+    <script>
+        // Retrieve cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Display cart items on the page
+        const cartItemsList = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+
+        let total = 0;
+
+        cartItems.forEach(item => {
+            // Check if item has valid properties before using toFixed
+            if (item && typeof item.price === 'number') {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+
+                const bookDetails = document.createElement('div');
+                bookDetails.className = 'book-details';
+
+                const bookTitleElement = document.createElement('div');
+                bookTitleElement.className = 'book-title';
+                bookTitleElement.textContent = item.title;
+
+                const bookPriceElement = document.createElement('div');
+                bookPriceElement.className = 'book-price';
+                bookPriceElement.textContent = `Rs. ${item.price.toFixed(2)}`;
+
+                bookDetails.appendChild(bookTitleElement);
+                bookDetails.appendChild(bookPriceElement);
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+
+                removeButton.addEventListener('click', () => {
+                    const itemIndex = cartItems.indexOf(item);
+                    if (itemIndex !== -1) {
+                        cartItems.splice(itemIndex, 1);
+                        localStorage.setItem('cart', JSON.stringify(cartItems));
+                        total -= item.price;
+                        cartItemsList.removeChild(cartItem);
+                        cartTotal.textContent = `Total: Rs. ${total.toFixed(2)}`;
+                    }
+                });
+
+                cartItem.appendChild(bookDetails);
+                cartItem.appendChild(removeButton);
+
+                cartItemsList.appendChild(cartItem);
+
+                total += item.price;
+            }
+        });
+
+        cartTotal.textContent = `Total: Rs. ${total.toFixed(2)}`;
+    </script>
+</body>
+</html>
+
+<html>
+    <body>
+        <div>
+
+        <!-- Checkout Form -->
+        <form class="checkout-form" action="order.html">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <button class="order-button" type="submit">Order Now</button>
+        </form>
+    </div>
+</body>
+</html>
